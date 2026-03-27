@@ -53,7 +53,7 @@ GitStreakWidget is distributed as a standalone APK during its independent releas
 
 **Step 1 — Download**
 
-Navigate to the [Releases](#) page and download the latest `GitStreak-v1.0.apk`.
+Navigate to the [Releases](https://github.com/danycli/GitStreakWidget/releases) page and download the latest `GitStreak-v1.0.apk`.
 
 **Step 2 — Allow Unknown Sources**
 
