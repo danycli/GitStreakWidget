@@ -78,7 +78,7 @@ Getting started takes under a minute. The app guides you through three simple st
 Open the app and enter your GitHub username in the input field. No passwords or tokens are needed.
 
 ```
-GitHub Username  →  [ yourusername ]  →  [ Verify ]
+GitHub Username  →  [ yourusername ]  →  [ Launch Tracker ]
 ```
 
 <!-- Replace with actual screenshot -->
