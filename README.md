@@ -187,6 +187,6 @@ git push origin feature/your-feature-name
 Built for developers, by a developer.  
 If you find GitStreakWidget useful, consider leaving a star on the repository.
 
-![GitHub Stars](https://img.shields.io/github/stars/danycli/GitStreakWidget?style=for-the-badge&logo=github&color=161B22&labelColor=0D1117)
+![GitHub Stars](https://img.shields.io/github/stars/danycli/GitStreakWidget?style=for-the-badge&logo=github&logoColor=white&labelColor=161B22&color=238636)
 
 </div>
