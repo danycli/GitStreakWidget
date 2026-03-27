@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Outer Flame (Orange) -->
+    <path
+        android:pathData="M100,20C100,20 130,50 145,85C160,120 150,160 110,175C135,170 150,140 145,115C165,130 170,165 145,185C120,205 70,200 50,170C30,140 45,90 85,45C75,65 70,95 85,120C75,90 85,55 100,20Z"
+        android:fillColor="#FF5722" />
+    <!-- Inner Flame (Yellow/Orange) -->
+    <path
+        android:pathData="M100,70C100,70 115,85 125,105C135,125 130,150 110,160C125,155 130,135 125,120C135,130 140,150 125,165C110,180 85,175 75,160C65,145 70,115 90,90C85,100 82,115 90,130C85,115 90,95 100,70Z"
+        android:fillColor="#FF9800" />
+    <!-- Character Face (Yellowish White) -->
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M100,120 C85,120 75,130 75,145 C75,160 85,170 100,170 C115,170 125,160 125,145 C125,130 115,120 100,120 Z" />
+    <!-- Cat Ears (Octocat-style) -->
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M80,130 L70,115 L85,125 Z" />
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M120,130 L130,115 L115,125 Z" />
+    <!-- Eyes -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M92,145A2.5,2.5 0,1 1,87 145A2.5,2.5 0,1 1,92 145ZM113,145A2.5,2.5 0,1 1,108 145A2.5,2.5 0,1 1,113 145Z" />
+    <!-- Small Smile -->
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M95,155C95,155 100,160 105,155" />
+</vector>

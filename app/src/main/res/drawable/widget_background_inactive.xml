@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 3D Shadow (GitHub Darker Grey) -->
+    <item>
+        <shape>
+            <solid android:color="#2d333b" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Main Surface (GitHub Grey) -->
+    <item android:bottom="4dp">
+        <shape>
+            <solid android:color="#444c56" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>
