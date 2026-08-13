@@ -11,7 +11,7 @@
 ---
 
 > A sleek, Android-native widget for developers who want to track daily GitHub contribution streaks —  
-> built with a **GitHub Dark Mode** inspired interface to keep you motivated and consistent.
+> built with a premium **charcoal & green** interface to keep you motivated and consistent.
 
 <!-- Replace with an actual home screen screenshot -->
 <img width="270" height="540" alt="image" src="https://github.com/user-attachments/assets/63a5bfd0-104f-4fb4-b71d-3dc8b5071ff9" />
@@ -38,11 +38,12 @@ GitStreakWidget is purpose-built for developers who care about consistency. Ever
 
 | Feature | Description |
 |---|---|
-| **Real-time Tracking** | Fetches your current contribution streak directly from the GitHub Contributions API |
-| **Native Widget** | A 3×2 home screen widget that refreshes automatically in the background |
-| **Modern UI** | A clean dashboard built with Material 3 and Jetpack Compose |
-| **Frictionless Setup** | Only your GitHub username is required — no OAuth tokens or API keys |
-| **Lightweight** | Engineered for minimal battery and data consumption |
+| **Real-time Tracking** | Fetches your current and historical contribution streak using accurate GraphQL analysis |
+| **Native Widget** | A 3×2 home screen widget that refreshes automatically in the background, complete with a **manual refresh** button |
+| **Premium UI** | A sleek, modern dashboard featuring abstract contribution grids, built with Material 3 and Jetpack Compose |
+| **Frictionless Setup** | Enter your GitHub username (Personal Access Token is optional for private repos) |
+| **Optimized Battery** | Engineered for minimal battery drain using WorkManager, which cleans up completely upon widget removal |
+| **Secure Storage** | Uses EncryptedSharedPreferences to safely store and automatically wipe credentials |
 
 ---
 
@@ -76,7 +77,7 @@ Getting started takes under a minute. The app guides you through three simple st
 
 ### Step 1 — Login
 
-Open the app and enter your GitHub username in the input field. No passwords or tokens are needed.
+Open the app and enter your GitHub username. A Personal Access Token (PAT) is optional but recommended if you want to track private commits.
 
 ```
 GitHub Username  →  [ yourusername ]  →  [ Launch Tracker ]
@@ -93,7 +94,7 @@ GitHub Username  →  [ yourusername ]  →  [ Launch Tracker ]
 
 ### Step 2 — Dashboard
 
-After verification, your current streak and contribution summary are displayed on the main dashboard.
+After verification, your current streak and contribution summary are displayed on the main dashboard, featuring a beautiful glowing UI.
 
 <!-- Replace with actual screenshot -->
 <div align="center">
@@ -125,33 +126,32 @@ Long-press Home Screen  →  Select "Widgets"  →  Find "GitStreak"  →  Drag 
 |---|---|
 | **Language** | Kotlin |
 | **Main App UI** | Jetpack Compose + Material 3 |
-| **Widget Layer** | Jetpack Glance |
-| **Networking** | GitHub Contributions API |
+| **Widget Layer** | RemoteViews (XML AppWidgets) |
+| **Networking** | OkHttp + JSON parsing |
+| **Background Sync** | WorkManager |
 | **Concurrency** | Kotlin Coroutines |
-| **Architecture** | Clean Architecture (MVVM) |
+| **Storage** | EncryptedSharedPreferences |
 
 ---
 
 ## Architecture
 
-GitStreakWidget follows **Clean Architecture** principles, separating data, domain, and presentation concerns to ensure the codebase stays maintainable and testable.
+GitStreakWidget blends **Compose** for the modern app experience with highly optimized classic Android components for reliable background processing.
 
 ```
 app/
-├── data/
-│   ├── remote/          # GitHub API client & response models
-│   └── repository/      # Repository implementations
-├── domain/
-│   ├── model/           # Core business models (Streak, Contribution)
-│   └── usecase/         # Application logic (FetchStreakUseCase)
-├── presentation/
-│   ├── ui/              # Jetpack Compose screens & components
-│   └── viewmodel/       # State holders & UI logic
-└── widget/
-    └── glance/          # Jetpack Glance widget definitions
+├── main/
+│   ├── java/com/danycli/gitstreakwidget/
+│   │   ├── MainActivity.kt        # Jetpack Compose UI (Guide & Login)
+│   │   ├── GitWidget.kt           # AppWidgetProvider & RemoteViews logic
+│   │   ├── GitStreakWorker.kt     # Background WorkManager syncing
+│   │   └── StreakRepository.kt    # API orchestration
+│   └── res/
+│       ├── layout/git_widget.xml  # Widget layout
+│       └── drawable/              # Custom modern UI shapes and icons
 ```
 
-Asynchronous networking is handled entirely with **Kotlin Coroutines**, keeping the main thread free and the UI responsive.
+Asynchronous networking is handled entirely with **Kotlin Coroutines**, keeping the main thread free and the UI responsive. The widget ensures battery efficiency by gracefully tearing down WorkManager jobs and wiping secrets upon widget removal.
 
 ---
 
