@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#0d1117">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GitStreak Configuration"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="GitHub Username"
+        android:textColorHint="#8b949e"
+        android:textColor="#ffffff"
+        android:backgroundTint="#30363d"
+        android:layout_marginBottom="12dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/token_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Personal Access Token (Optional)"
+        android:textColorHint="#8b949e"
+        android:textColor="#ffffff"
+        android:backgroundTint="#30363d"
+        android:layout_marginBottom="24dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff5555"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Launch Tracker"
+            android:textColor="#ffffff"
+            android:backgroundTint="#238636"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="#ffffff"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

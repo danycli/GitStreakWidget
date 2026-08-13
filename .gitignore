@@ -13,3 +13,15 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Sensitive files and credentials
+*.jks
+*.keystore
+google-services.json
+secrets.properties
+key.properties
+.env
+play-store-credentials.json
+
+# Tooling and IDE
+.claude/

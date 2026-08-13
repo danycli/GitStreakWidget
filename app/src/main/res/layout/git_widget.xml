@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/widget_background"
-    android:padding="10dp">
+    android:padding="16dp">
 
-    <!-- Header: Icon + Title (Original Big Size) -->
+    <!-- Header: Icon + Title -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -15,18 +15,31 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@drawable/ic_github"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="8dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Commit Streak"
-            android:textColor="#c9d1d9"
-            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
             android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/refresh_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_refresh"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="2dp" />
     </LinearLayout>
 
     <FrameLayout
@@ -34,11 +47,11 @@
         android:layout_below="@id/header"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="#308b949e" />
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="#21262d" />
 
-    <!-- Main Content: Fire Mascot + Streak Count (Original Big Size) -->
+    <!-- Main Content: Fire Mascot + Streak Count -->
     <LinearLayout
         android:id="@+id/content_main"
         android:layout_below="@id/divider"
@@ -49,20 +62,36 @@
 
         <ImageView
             android:id="@+id/mascot_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:src="@drawable/ic_fire_mascot"
             android:scaleType="fitCenter" />
 
-        <TextView
-            android:id="@+id/streak_count_text"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="10 day streak"
-            android:textColor="#3fb950"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:baselineAligned="true">
+            
+            <TextView
+                android:id="@+id/streak_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="180"
+                android:textColor="#ffffff"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+                
+            <TextView
+                android:id="@+id/streak_label_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="day streak"
+                android:textColor="#8b949e"
+                android:textSize="16sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Weekly View (6 days - Tightened) -->
@@ -71,39 +100,39 @@
         android:layout_below="@id/content_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:baselineAligned="false">
 
-        <LinearLayout android:id="@+id/day_5_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+        <LinearLayout android:id="@+id/day_5_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
             <TextView android:id="@+id/day_5_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_5_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+            <ImageView android:id="@+id/day_5_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/day_4_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+        <LinearLayout android:id="@+id/day_4_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
             <TextView android:id="@+id/day_4_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="M" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_4_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+            <ImageView android:id="@+id/day_4_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/day_3_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+        <LinearLayout android:id="@+id/day_3_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
             <TextView android:id="@+id/day_3_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_3_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+            <ImageView android:id="@+id/day_3_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/day_2_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+        <LinearLayout android:id="@+id/day_2_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
             <TextView android:id="@+id/day_2_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="W" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_2_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+            <ImageView android:id="@+id/day_2_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/day_1_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+        <LinearLayout android:id="@+id/day_1_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
             <TextView android:id="@+id/day_1_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_1_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+            <ImageView android:id="@+id/day_1_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/day_0_container" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_margin="2dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
-            <TextView android:id="@+id/day_0_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
-            <ImageView android:id="@+id/day_0_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:color/transparent" android:layout_marginTop="2dp" />
+        <LinearLayout android:id="@+id/day_0_container" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="3dp" android:background="@drawable/day_box_inactive" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/day_0_letter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F" android:textColor="#8b949e" android:textSize="11sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/day_0_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@android:color/transparent" android:layout_marginTop="4dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -114,11 +143,10 @@
         android:layout_below="@id/weekly_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Committed today 🔥 Keep it up!"
+        android:text="No commit today 🐱"
         android:textColor="#c9d1d9"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textSize="13sp" />
 
 </RelativeLayout>
