@@ -14,7 +14,8 @@
 > built with a **GitHub Dark Mode** inspired interface to keep you motivated and consistent.
 
 <!-- Replace with an actual home screen screenshot -->
-<img width="270" height="540" alt="Screenshot_20260327-234225" src="https://github.com/user-attachments/assets/61404609-6b85-4eb8-a2bf-4b1e7c92a37b" />
+<img width="270" height="540" alt="image" src="https://github.com/user-attachments/assets/63a5bfd0-104f-4fb4-b71d-3dc8b5071ff9" />
+
 
 </div>
 
@@ -83,7 +84,8 @@ GitHub Username  →  [ yourusername ]  →  [ Launch Tracker ]
 
 <!-- Replace with actual screenshot -->
 <div align="center">
-<img width="270" height="540" alt="Screenshot_20260327-235144" src="https://github.com/user-attachments/assets/1c208328-298a-45d7-be90-de892dd81d6c" />
+<img width="270" height="540" alt="image" src="https://github.com/user-attachments/assets/16c40e11-10bb-421b-8124-84032d177e2e" />
+
 </div>
 
 
@@ -95,7 +97,8 @@ After verification, your current streak and contribution summary are displayed o
 
 <!-- Replace with actual screenshot -->
 <div align="center">
-<img width="270" height="540" alt="Screenshot_20260327-234225" src="https://github.com/user-attachments/assets/61404609-6b85-4eb8-a2bf-4b1e7c92a37b" />
+<img width="270" height="540" alt="image" src="https://github.com/user-attachments/assets/aaa94a16-7ad6-41a8-b9b4-c9f18c5cad77" />
+
 </div>
 
 ---
@@ -110,7 +113,8 @@ Long-press Home Screen  →  Select "Widgets"  →  Find "GitStreak"  →  Drag 
 
 <!-- Replace with actual screenshot -->
 <div align="center">
-<img width="270" height="540" alt="Screenshot_20260327-235505" src="https://github.com/user-attachments/assets/b0c4a095-05d4-419f-8c86-e3b912a02c86" />
+<img width="270" height="540" alt="image" src="https://github.com/user-attachments/assets/3c718f46-e029-43f7-9087-411a1f34c17e" />
+
 </div>
 
 ---
