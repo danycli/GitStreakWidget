@@ -84,6 +84,7 @@ class WidgetConfigActivity : ComponentActivity() {
                             .putString("github_username", username)
                             .putString("github_pat", token)
                             .putString("cached_streak_data", result.data.toJson())
+                            .remove(KEY_COUNTED_DATE)
                             .apply()
             
                         // Update the widget

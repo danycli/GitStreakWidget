@@ -97,6 +97,7 @@ fun MainApp() {
                         sharedPreferences.edit()
                             .putString("github_username", newUsername)
                             .putString("github_pat", newToken)
+                            .remove(KEY_COUNTED_DATE)
                             .apply()
                         savedUsername = newUsername
                         savedToken = newToken

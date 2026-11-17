@@ -54,7 +54,7 @@ class GitWidget : AppWidgetProvider() {
 
     override fun onDisabled(context: Context) {
         super.onDisabled(context)
-        androidx.work.WorkManager.getInstance(context).cancelUniqueWork("GitStreakSync")
+        cancelStreakWork(context)
         PreferencesHelper.getEncryptedSharedPreferences(context).edit().clear().apply()
     }
 }
